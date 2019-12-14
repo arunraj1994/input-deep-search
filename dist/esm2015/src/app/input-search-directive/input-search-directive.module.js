@@ -1,0 +1,17 @@
+import * as tslib_1 from "tslib";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { InputSearchDirective } from './input-search.directive';
+let InputSearchDirectiveModule = class InputSearchDirectiveModule {
+};
+InputSearchDirectiveModule = tslib_1.__decorate([
+    NgModule({
+        declarations: [InputSearchDirective],
+        imports: [
+            CommonModule
+        ],
+        exports: [InputSearchDirective]
+    })
+], InputSearchDirectiveModule);
+export { InputSearchDirectiveModule };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5wdXQtc2VhcmNoLWRpcmVjdGl2ZS5tb2R1bGUuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9pbnB1dC1kZWVwLXNlYXJjaC8iLCJzb3VyY2VzIjpbInNyYy9hcHAvaW5wdXQtc2VhcmNoLWRpcmVjdGl2ZS9pbnB1dC1zZWFyY2gtZGlyZWN0aXZlLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFDL0MsT0FBTyxFQUFFLG9CQUFvQixFQUFFLE1BQU0sMEJBQTBCLENBQUM7QUFTaEUsSUFBYSwwQkFBMEIsR0FBdkMsTUFBYSwwQkFBMEI7Q0FBSSxDQUFBO0FBQTlCLDBCQUEwQjtJQVB0QyxRQUFRLENBQUM7UUFDUixZQUFZLEVBQUUsQ0FBRSxvQkFBb0IsQ0FBRTtRQUN0QyxPQUFPLEVBQUU7WUFDUCxZQUFZO1NBQ2I7UUFDRCxPQUFPLEVBQUUsQ0FBRSxvQkFBb0IsQ0FBRTtLQUNsQyxDQUFDO0dBQ1csMEJBQTBCLENBQUk7U0FBOUIsMEJBQTBCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IENvbW1vbk1vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbic7XG5pbXBvcnQgeyBJbnB1dFNlYXJjaERpcmVjdGl2ZSB9IGZyb20gJy4vaW5wdXQtc2VhcmNoLmRpcmVjdGl2ZSc7XG5cbkBOZ01vZHVsZSh7XG4gIGRlY2xhcmF0aW9uczogWyBJbnB1dFNlYXJjaERpcmVjdGl2ZSBdLFxuICBpbXBvcnRzOiBbXG4gICAgQ29tbW9uTW9kdWxlXG4gIF0sXG4gIGV4cG9ydHM6IFsgSW5wdXRTZWFyY2hEaXJlY3RpdmUgXVxufSlcbmV4cG9ydCBjbGFzcyBJbnB1dFNlYXJjaERpcmVjdGl2ZU1vZHVsZSB7IH1cbiJdfQ==
