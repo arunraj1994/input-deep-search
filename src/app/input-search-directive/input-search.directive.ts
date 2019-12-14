@@ -30,7 +30,7 @@ export class InputSearchDirective {
     var result = null;
     if(inputObject instanceof Array) {
         for(var i = 0; i < inputObject.length; i++) {
-            result = this.getObject(inputObject[i], searchData, dataProperties);
+            return this.getObject(inputObject[i], searchData, dataProperties) ? true : false;
         }
     }
     else
