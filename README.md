@@ -22,7 +22,7 @@ import { InputSearchDirectiveModule } from 'input-deep-search';
 3. In template add directive like below
 
 ```html
-<input type="text" [(ngModel)]="searchInput" appInputSearch [searchText]="searchInput" [jsonData]=data [dataProperties]=properties (filteredData)="filteredData($event)">
+<input type="text" [(ngModel)]="searchInput" appInputSearch [searchText]="searchInput" [jsonData]="data" [dataProperties]="properties" (filteredData)="filteredData($event)">
 ```
 4. In .ts assign value to model variable "data" and give as input to [jsonData] attribute.
   ```typescript
