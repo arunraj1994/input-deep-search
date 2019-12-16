@@ -1,6 +1,6 @@
 {
   "name": "input-deep-search",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,7 +15,7 @@
     "tslib": "^1.10.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.20",
+    "@angular-devkit/build-angualar": "~0.803.20",
     "@angular/animations": "~8.2.14",
     "@angular/cli": "~8.3.20",
     "@angular/common": "~8.2.14",
@@ -49,5 +49,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/arunraj1994/input-deep-search.git"
-  }
+  },
+  "keywords": [
+    "ng",
+    "angular",
+    "directive",
+    "input-search",
+    "deep-input-search"
+  ]
+  
 }
