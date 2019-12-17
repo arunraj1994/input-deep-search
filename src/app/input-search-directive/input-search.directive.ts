@@ -36,13 +36,14 @@ export class InputSearchDirective {
     else
     {
         for(var prop in inputObject) {
-            if(dataProperties.includes(prop)) {
-                if(inputObject[prop].replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase().includes(searchData)) {
-                    return true;
-                }
-            }
-            if(inputObject[prop] instanceof Object || inputObject[prop] instanceof Array)
-                result = this.getObject(inputObject[prop], searchData, dataProperties);
+          if(inputObject[prop] instanceof Object || inputObject[prop] instanceof Array)
+            return this.getObject(inputObject[prop], searchData, dataProperties);
+
+          if(dataProperties.length > 0 ? dataProperties.includes(prop) : true) {
+              if(inputObject[prop].replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase().includes(searchData)) {
+                  return true;
+              }
+          }
         }
     }
     return result;
