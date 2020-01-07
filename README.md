@@ -19,12 +19,13 @@ import { InputSearchDirectiveModule } from 'input-deep-search';
 })
  ```
 
-3. In template add directive like below
+3.In template add directive like below
 
-```html
-<input type="text" [(ngModel)]="searchInput" appInputSearch [searchText]="searchInput" [jsonData]="data" [dataProperties]="properties" (filteredData)="filteredData($event)">
-```
-4. In .ts assign value to model variable "data" and give as input to [jsonData] attribute.
+  ```html
+  <input type="text" [(ngModel)]="searchInput" appInputSearch [searchText]="searchInput" [jsonData]="data" [dataProperties]="properties" (filteredData)="filteredData($event)">
+  ```
+
+4.In .ts assign value to model variable "data" and give as input to "[jsonData]" attribute in the template.
   ```typescript
   this.data = [
     {
@@ -32,52 +33,51 @@ import { InputSearchDirectiveModule } from 'input-deep-search';
       "age": 16,
       "hobbies": [{
         "game": "tennis"
-        "proffesional": "no"
+        "professional": "no"
         },
         {
           "game": "cricket"
-          "proffesional": "yes"
+          "professional": "yes"
         },
       ],
       "name": "Ramu",
       "age": 23,
       "hobbies": [{
         "game": "batmiton"
-        "proffesional": "yes"
+        "professional": "yes"
         },
         {
           "game": "hockey"
-          "proffesional": "no"
+          "professional": "no"
         },
       ]
     }
   ]
   ```
 
-5. In .ts assign value to model variable "properties" and give as input to [dataProperties] attribute. The properties are the object properties where you want to make search.
+5.In .ts assign value to model variable "properties" and give as input to "[dataProperties]" attribute in the template. The properties are the object properties where you want to make search.
   ```typescript
-    this.properties = ["game","proffesional"];
+    this.properties = ["game","professional"];
   ```
+  Above is the example where I am assigning the array of object properties to make search only in that particular property. If the array is empty, It will make search in all object properties. 
 
-Above is the example where I'am assigning the array of object properties to make search in that particular property only.If it is empty array It make search in all object properties. 
+6.Assign the "searchInput" value to the property "[searchText]" attribute in template. The "searchInput" should be the value which is typed in the search input tag.
 
-6. Assign the 'searchInput' value to the property [searchText]. The 'searchInput' should be the value which is typed in the search input tag.
-
-```typescript
+  ```typescript
   [(ngModel)]="searchInput"
   [searchText]="searchInput"
-```
+  ```
 
-7. Add the below event method to the input tag to get the filtered data.
+7.Add the below event method to the input tag to get the filtered data inside that method.
 
-```html
+  ```html
   (filteredData)="filteredData($event)"
-```
+  ```
 
-8. In .ts file add function to get the filtered data from the given json object.
+8.In .ts file add function to get the filtered data from the given json object.
 
-```typescript
-filteredData(data) {
-    //....
-}
-```
+  ```typescript
+  filteredData(data) {
+      //....
+  }
+  ```
