@@ -29,7 +29,6 @@ export class InputSearchDirective {
   getObject(inputObject, searchData, dataProperties) {
     var result = null;
     if(inputObject instanceof Array) {
-      debugger;
         for(var i = 0; i < inputObject.length; i++) {
             if(this.getObject(inputObject[i], searchData, dataProperties)) {
               return true;
@@ -42,7 +41,6 @@ export class InputSearchDirective {
             return this.getObject(inputObject[prop], searchData, dataProperties);
 
           if(dataProperties.length > 0 ? dataProperties.includes(prop) : true) {
-            debugger;
               if(inputObject[prop].replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase().includes(searchData)) {
                   return true;
               }
