@@ -25,21 +25,24 @@ export class InputSearchDirective {
       }
     }
     this.filteredData.emit(resultData);
-}
+  }
   getObject(inputObject, searchData, dataProperties) {
     var result = null;
     if(inputObject instanceof Array) {
+      debugger;
         for(var i = 0; i < inputObject.length; i++) {
-            return this.getObject(inputObject[i], searchData, dataProperties) ? true : false;
+            if(this.getObject(inputObject[i], searchData, dataProperties)) {
+              return true;
+            }
         }
     }
-    else
-    {
+    else {
         for(var prop in inputObject) {
           if(inputObject[prop] instanceof Object || inputObject[prop] instanceof Array)
             return this.getObject(inputObject[prop], searchData, dataProperties);
 
           if(dataProperties.length > 0 ? dataProperties.includes(prop) : true) {
+            debugger;
               if(inputObject[prop].replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase().includes(searchData)) {
                   return true;
               }
